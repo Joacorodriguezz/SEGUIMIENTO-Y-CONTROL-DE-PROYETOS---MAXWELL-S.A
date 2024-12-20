@@ -1,0 +1,179 @@
+/* General body and layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f5f7;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Sidebar fija */
+    top: 0; /* Alineación al top */
+    left: 0;
+    height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 10; /* Asegura que esté sobre el contenido */
+  }
+  
+  .sidebar .text-center {
+    font-size: 1.125rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: #4b5563;
+  }
+  
+  .sidebar .text-sm {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    flex-grow: 1; /* Hace que la lista ocupe el espacio disponible */
+  }
+  
+  .sidebar ul li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding-right: 1.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+    text-decoration: none; /* Elimina subrayado */
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #f9fafb;
+    color: #111827;
+    border-left-color: #6366f1;
+  }
+  
+  .sidebar ul li a.active-menu-item {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    border-left-color: #6366f1;
+  }
+  
+  .sidebar ul li a svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.75rem;
+  }
+  
+  .sidebar ul li a .text-xs {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.125rem 0.375rem;
+    border-radius: 9999px;
+  }
+  
+  .sidebar ul li a .text-indigo-500 {
+    color: #6366f1;
+    background-color: #eff6ff;
+  }
+  
+  .sidebar ul li a .text-red-500 {
+    color: #f87171;
+    background-color: #fee2e2;
+  }
+  
+  .sidebar ul li a .text-green-500 {
+    color: #34d399;
+    background-color: #d1fae5;
+  }
+  
+  .sidebar ul li a .ml-auto {
+    margin-left: auto;
+  }
+  
+  /* Iniciar sesión link - positioned at the bottom */
+  
+  .sidebar .iniciar-sesion {
+    margin-top: 1rem; /* Ajusta el valor de margin-top para moverlo más arriba */
+    margin-bottom: 1rem ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    color: #4b5563;
+    text-decoration: none; /* Elimina subrayado */
+  }
+  
+  .sidebar .iniciar-sesion:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  .sidebar .iniciar-sesion svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-left: 240px; /* Deja espacio para la sidebar fija */
+  }
+  
+  #project-progress-chart, #calendar {
+    height: 300px;
+  }
+  
+  /* Estilos para las métricas y KPIs */
+  .metric {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .metric .text-3xl {
+    font-weight: 700;
+  }
+  
+  .metric .text-gray-500 {
+    font-size: 1rem;
+  }
+  
+  /* Estilos para la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f9fafb;
+    border-bottom: 2px solid #e5e7eb;
+  }
+  
+  tr:hover {
+    background-color: #f3f4f6;
+  }
+  
